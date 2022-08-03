@@ -13,7 +13,7 @@
 - Matteo M
 - Luca
 - Pietro V
-- Giorgio 
+- [ggiorgini-bip](https://github.com/ggiorgini-bip) 
 - Livio
 - Andrea M
 - Piervito
