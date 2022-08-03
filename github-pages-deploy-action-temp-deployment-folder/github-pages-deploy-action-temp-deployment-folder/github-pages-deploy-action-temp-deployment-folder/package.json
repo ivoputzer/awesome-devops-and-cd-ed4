@@ -5,7 +5,6 @@
   "main": "index.mjs",
   "type": "module",
   "scripts": {
-    "start": "node bin/start.mjs",
     "test": "mocha"
   },
   "repository": {
