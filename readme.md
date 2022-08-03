@@ -16,7 +16,7 @@
 - Giorgio
 - [@liviobi](https://github.com/liviobi)
 - Andrea M
-- Piervito
+- [@pcoletta](https://github.com/pcoletta)
 - Serghei
 - Mattia
 - Roberto
