@@ -13,7 +13,7 @@
 - Matteo M
 - Luca
 - Pietro V
-- Giorgio
+- Giorgio 
 - Livio
 - Andrea M
 - Piervito
