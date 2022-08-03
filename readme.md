@@ -11,7 +11,7 @@
 
 - [@ivoputzer](https://github.com/ivoputzer)
 - [@matteomarchiori](https://github.com/matteomarchiori)
-- Luca
+- [@lucafumagalli](https://github.com/lucafumagalli)
 - Pietro V
 - Giorgio
 - [@liviobi](https://github.com/liviobi)
