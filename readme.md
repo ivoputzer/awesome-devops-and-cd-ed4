@@ -22,6 +22,6 @@
 - Roberto
 - Tommaso
 - Francesco
-- [@mstraface](https://github.com/mstraface)
+- Mariangela
 - Matteo R.
 - Devlogs
