@@ -20,7 +20,7 @@
 - Serghei
 - [@mattiafederici](https://github.com/mattiafederici)
 - Roberto
-- Tommaso
+- [@tommasopiferi-bip](https://github.com/tommasopiferi-bip)
 - Francesco
 - [@mstraface](https://github.com/mstraface)
 - Matteo R.
