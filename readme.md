@@ -13,11 +13,16 @@
 - Matteo M
 - Luca
 - [@pietro](https://github.com/pietrovassallo-bip)
-- Giorgio 
+- Giorgio
 - Livio
 - Andrea M
 - Piervito
 - Serghei
 - Mattia
 - Roberto
+- Tommaso
+- Francesco
+- Mariangela
+- Matteo R.
+- Devlogs
 - Tommaso
