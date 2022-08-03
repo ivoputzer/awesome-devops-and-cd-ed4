@@ -8,3 +8,5 @@
 
 ### Contributors
 - Ivo
+- Matteo M
+- Luca
