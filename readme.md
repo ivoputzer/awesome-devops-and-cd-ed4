@@ -10,3 +10,4 @@
 - Ivo
 - Matteo M
 - Luca
+- Giorgio
