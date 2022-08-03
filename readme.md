@@ -8,4 +8,3 @@
 
 ### Contributors
 - Ivo
-- Giorgio
