@@ -11,6 +11,7 @@ Create a basic template (html/css/js) or mockup for the `battlefield` game that 
 - open a pull request to submit your solution
 
 > TIMEBOX 1:30 h
+> 16.40
 
 ### Team 1
 Roberto Manzo
