@@ -11,7 +11,7 @@
 
 - Ivo
 - Matteo M
-- Luca
+- [@lucafumagalli](https://github.com/lucafumagalli)
 - Pietro V
 - Giorgio
 - Livio
