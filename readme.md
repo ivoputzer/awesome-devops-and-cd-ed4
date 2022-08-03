@@ -7,6 +7,13 @@
 - Rock paper scissors
 - Connect 4
 
+
+### Installation
+
+- `git clone git@github.com:ivoputzer/awesome-devops-and-cd-ed4.git`
+- `cd awesome-devops-and-cd-ed4`
+- `npm install`
+
 ### Contributors
 
 - [@ivoputzer](https://github.com/ivoputzer)
