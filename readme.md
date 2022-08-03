@@ -9,19 +9,20 @@
 
 ### Contributors
 
-- Ivo
+- [@ivoputzer](https://github.com/ivoputzer)
 - [@matteomarchiori](https://github.com/matteomarchiori)
-- Luca
-- Pietro V
+- [@lucafumagalli](https://github.com/lucafumagalli)
+- [@pietro](https://github.com/pietrovassallo-bip)
 - Giorgio
 - [@liviobi](https://github.com/liviobi)
 - Andrea M
 - [@pcoletta](https://github.com/pcoletta)
 - [@ssocolovschi](https://github.com/ssocolovschi)
-- Mattia
-- Roberto
-- Tommaso
+- [@mattiafederici](https://github.com/mattiafederici)
+- [@robertomanzobip](https://github.com/robertomanzo-bip)
+- [@tommasopiferi-bip](https://github.com/tommasopiferi-bip)
 - Francesco
 - [@mstraface](https://github.com/mstraface)
-- Matteo R.
+- [Matteo R.](https://github.com/mr-bip)
 - Devlogs
+- Tommaso
