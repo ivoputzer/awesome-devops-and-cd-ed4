@@ -10,18 +10,18 @@
 ### Contributors
 
 - Ivo
-- Matteo M
+- [@matteomarchiori](https://github.com/matteomarchiori)
 - Luca
 - Pietro V
-- Giorgio 
-- Livio
+- Giorgio
+- [@liviobi](https://github.com/liviobi)
 - Andrea M
-- Piervito
+- [@pcoletta](https://github.com/pcoletta)
 - [@ssocolovschi](https://github.com/ssocolovschi)
 - Mattia
 - Roberto
 - Tommaso
 - Francesco
-- Mariangela
-
+- [@mstraface](https://github.com/mstraface)
 - Matteo R.
+- Devlogs
