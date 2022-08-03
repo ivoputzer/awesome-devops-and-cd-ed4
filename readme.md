@@ -15,7 +15,8 @@
 - [@pietro](https://github.com/pietrovassallo-bip)
 - Giorgio
 - [@liviobi](https://github.com/liviobi)
-- Andrea M
+- [@AndreaMontemaggiore1](https://github.com/AndreaMontemaggiore1)
+- Piervito
 - [@pcoletta](https://github.com/pcoletta)
 - [@ssocolovschi](https://github.com/ssocolovschi)
 - [@mattiafederici](https://github.com/mattiafederici)
