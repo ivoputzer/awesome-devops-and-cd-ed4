@@ -10,7 +10,7 @@
 ### Contributors
 
 - Ivo
-- Matteo M
+- [@matteomarchiori](https://github.com/matteomarchiori)
 - [@lucafumagalli](https://github.com/lucafumagalli)
 - Pietro V
 - Giorgio
