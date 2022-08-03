@@ -1,8 +1,8 @@
-import {ok} from 'assert'
+import {equal} from 'assert'
 import battleship from '../index.mjs'
 
 describe('battleship', () => {
   it('should be defined', () => {
-    ok(battleship)
+    equal(typeof battleship, 'function')
   })
 })
