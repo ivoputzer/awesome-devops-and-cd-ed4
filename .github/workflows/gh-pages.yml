@@ -1,0 +1,15 @@
+name: Github Pages Deploy
+on:
+  push:
+    branches:
+    - master
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: ./
+
