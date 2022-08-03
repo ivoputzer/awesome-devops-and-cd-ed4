@@ -1,6 +1,6 @@
 # template assignment
 
-Create a basic template (html/css/js) or mockup for the `battlefield` game that we can use as part of, or to develop the application;
+Create a basic template (html/css/js) or mockup for the `battleship` game that we can use as part of, or to develop the application;
   - look for different implementations of the game available online;
   - think of how the game should be structured and work;
   - think of what the user interactions would be in order to play the game (all possible interactions with the game);
