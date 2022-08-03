@@ -112,7 +112,7 @@ html {
 	margin: 9px;
 	border: 1px solid #3be7e7;
 	border-radius: 50%;
-	display: table;
+	display: table-caption;
 }
 
 
@@ -236,7 +236,7 @@ html {
 	border-radius: 100%;
 	overflow: hidden;
 
-	display: table;
+	display: table-caption;
 
 	animation-name: expand;
 	animation-duration: 0.5s;
@@ -270,7 +270,7 @@ html {
 	border-radius: 100%;
 	overflow: hidden;
 
-	display: table;
+	display: table-caption;
 
 	animation: expand;
 	animation-duration: 0.5s;
