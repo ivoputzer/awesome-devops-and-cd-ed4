@@ -16,7 +16,7 @@
 - Giorgio
 - Livio
 - Andrea M
-- Piervito
+- [@pcoletta](https://github.com/pcoletta)
 - Serghei
 - Mattia
 - Roberto
