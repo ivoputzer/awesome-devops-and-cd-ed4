@@ -21,6 +21,6 @@
 - [@mattiafederici](https://github.com/mattiafederici)
 - [@robertomanzobip](https://github.com/robertomanzo-bip)
 - [@tommasopiferi-bip](https://github.com/tommasopiferi-bip)
-- Francesco
+- [@fdemontis](https://github.com/fdemontis)
 - [@mstraface](https://github.com/mstraface)
 - [@Matteo R.](https://github.com/mr-bip)
