@@ -17,11 +17,10 @@
 - Livio
 - Andrea M
 - Piervito
-- Serghei
+- [@ssocolovschi](https://github.com/ssocolovschi)
 - Mattia
 - Roberto
 - Tommaso
 - Francesco
 - Mariangela
-
 - Matteo R.
