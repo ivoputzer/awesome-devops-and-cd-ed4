@@ -13,7 +13,7 @@
 - [@matteomarchiori](https://github.com/matteomarchiori)
 - [@lucafumagalli](https://github.com/lucafumagalli)
 - [@pietro](https://github.com/pietrovassallo-bip)
-- Giorgio
+- [@giorgio](https://github.com/ggiorgini-bip)
 - [@liviobi](https://github.com/liviobi)
 - [@AndreaMontemaggiore1](https://github.com/AndreaMontemaggiore1)
 - [@pcoletta](https://github.com/pcoletta)
