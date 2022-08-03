@@ -10,13 +10,13 @@
 ### Contributors
 
 - Ivo
-- Matteo M
+- [@matteomarchiori](https://github.com/matteomarchiori)
 - Luca
 - Pietro V
 - [@ggiorgini-bip](https://github.com/ggiorgini-bip) 
-- Livio
+- [@liviobi](https://github.com/liviobi)
 - Andrea M
-- Piervito
+- [@pcoletta](https://github.com/pcoletta)
 - Serghei
 - Mattia
 - Roberto
