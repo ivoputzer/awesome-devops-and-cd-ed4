@@ -16,7 +16,6 @@
 - Giorgio
 - [@liviobi](https://github.com/liviobi)
 - [@AndreaMontemaggiore1](https://github.com/AndreaMontemaggiore1)
-- Piervito
 - [@pcoletta](https://github.com/pcoletta)
 - [@ssocolovschi](https://github.com/ssocolovschi)
 - [@mattiafederici](https://github.com/mattiafederici)
@@ -25,5 +24,3 @@
 - Francesco
 - [@mstraface](https://github.com/mstraface)
 - [@Matteo R.](https://github.com/mr-bip)
-- Devlogs
-- Tommaso
