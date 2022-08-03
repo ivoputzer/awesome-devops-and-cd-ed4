@@ -19,7 +19,7 @@
 - [@pcoletta](https://github.com/pcoletta)
 - Serghei
 - Mattia
-- Roberto
+- [@robertomanzobip](https://github.com/robertomanzo-bip)
 - Tommaso
 - Francesco
 - [@mstraface](https://github.com/mstraface)
