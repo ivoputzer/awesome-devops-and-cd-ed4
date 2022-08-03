@@ -12,8 +12,8 @@
 - Ivo
 - Matteo M
 - Luca
-- Pietro V
-- Giorgio
+- [@pietro](https://github.com/pietrovassallo-bip)
+- Giorgio 
 - Livio
 - Andrea M
 - Piervito
@@ -21,7 +21,3 @@
 - Mattia
 - Roberto
 - Tommaso
-- Francesco
-- Mariangela
-- Matteo R.
-- Devlogs
