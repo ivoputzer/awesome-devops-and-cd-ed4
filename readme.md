@@ -20,7 +20,7 @@
 - Serghei
 - Mattia
 - Roberto
-- Tommaso
+- [@tommasopiferi-bip](https://github.com/tommasopiferi-bip)
 - Francesco
 - Mariangela
 - Matteo R.
