@@ -13,6 +13,7 @@
 - `git clone git@github.com:ivoputzer/awesome-devops-and-cd-ed4.git`
 - `cd awesome-devops-and-cd-ed4`
 - `npm install`
+- `npm test`
 
 ### Contributors
 
