@@ -1,0 +1,27 @@
+{
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "explorer.confirmDelete": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": false,
+  "editor.inlineSuggest.enabled": true,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.parcel-cache": true,
+    "**/.svn": true
+  },
+  "terminal.integrated.altClickMovesCursor": false,
+  "terminal.integrated.copyOnSelection": true,
+  "git.autoRepositoryDetection": "subFolders",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "standard.enable": true,
+  "standard.run": "onType",
+  "standard.autoFixOnSave": true
+}

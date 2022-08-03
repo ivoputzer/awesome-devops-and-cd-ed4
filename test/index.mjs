@@ -3,7 +3,6 @@ import battleship from '../index.mjs'
 
 describe('battleship', () => {
   it('should be defined', () => {
-    // ok(battleship)
-    ok(false)
+    ok(battleship)
   })
 })
