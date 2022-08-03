@@ -1,0 +1,23 @@
+{
+  "name": "awesome-devops-and-cd-ed4",
+  "version": "0.0.0-beta.0",
+  "description": "",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivoputzer/awesome-devops-and-cd-ed4.git"
+  },
+  "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com> (https://github.com/ivoputzer)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivoputzer/awesome-devops-and-cd-ed4/issues"
+  },
+  "homepage": "https://github.com/ivoputzer/awesome-devops-and-cd-ed4#readme",
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
+}
