@@ -13,7 +13,7 @@
 - Matteo M
 - Luca
 - Pietro V
-- Giorgio 
+- Giorgio
 - Livio
 - Andrea M
 - Piervito
@@ -23,5 +23,5 @@
 - Tommaso
 - Francesco
 - Mariangela
-
 - Matteo R.
+- Devlogs
