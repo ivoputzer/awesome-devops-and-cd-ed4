@@ -5,7 +5,7 @@
   "main": "index.mjs",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ivoputzer/awesome-devops-and-cd-ed4/issues"
   },
-  "homepage": "https://github.com/ivoputzer/awesome-devops-and-cd-ed4#readme"
+  "homepage": "https://github.com/ivoputzer/awesome-devops-and-cd-ed4#readme",
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
 }
