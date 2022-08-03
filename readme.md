@@ -13,7 +13,7 @@
 - Matteo M
 - Luca
 - Pietro V
-- [ggiorgini-bip](https://github.com/ggiorgini-bip) 
+- [@ggiorgini-bip](https://github.com/ggiorgini-bip) 
 - Livio
 - Andrea M
 - Piervito
@@ -23,5 +23,5 @@
 - Tommaso
 - Francesco
 - Mariangela
-
 - Matteo R.
+- Devlogs
