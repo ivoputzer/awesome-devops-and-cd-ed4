@@ -14,7 +14,7 @@
 - Luca
 - Pietro V
 - Giorgio
-- Livio
+- [@liviobi](https://github.com/liviobi)
 - Andrea M
 - Piervito
 - Serghei
