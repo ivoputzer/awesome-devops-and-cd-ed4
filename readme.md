@@ -23,6 +23,6 @@
 - [@tommasopiferi-bip](https://github.com/tommasopiferi-bip)
 - Francesco
 - [@mstraface](https://github.com/mstraface)
-- [Matteo R.](https://github.com/mr-bip)
+- [@Matteo R.](https://github.com/mr-bip)
 - Devlogs
 - Tommaso
