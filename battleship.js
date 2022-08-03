@@ -1,7 +1,7 @@
 var rows = 10;
 var cols = 10;
 var squareSize = 50;
-
+var torpedos=5;
 // get the container element
 var gameBoardContainer = document.getElementById("gameboard");
 
@@ -36,7 +36,7 @@ for (i = 0; i < cols; i++) {
       Patrol Boat - 2 hits
 */
 var hitCount = 0;
-var torpedos=15;
+let fired=0;
 /* create the 2d array that will contain the status of each square on the board
    and place ships on the board (later, create function for random placement!)
    0 = empty, 1 = part of a ship, 2 = a sunken part of a ship, 3 = a missed shot
@@ -60,7 +60,7 @@ gameBoardContainer.addEventListener("click", fireTorpedo, false);
 // initial code via http://www.kirupa.com/html5/handling_events_for_many_elements.htm:
 function fireTorpedo(e) {
     // if item clicked (e.target) is not the parent element on which the event listener was set (e.currentTarget)
-  if (torpedos == 0){
+  if (fired >=5){
     alert("You have no more torpedos, you lose!");
   }else{
     if (e.target !== e.currentTarget) {
@@ -80,7 +80,7 @@ function fireTorpedo(e) {
         e.target.style.background = 'red';
         // set this square's value to 2 to indicate the ship has been hit
         gameBoard[row][col] = 2;
-        torpedos--;
+        fired++;
         // increment hitCount each time a ship is hit
         hitCount++;
         // this definitely shouldn't be hard-coded, but here it is anyway. lazy, simple solution:

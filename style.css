@@ -1,40 +1,497 @@
+@keyframes setShip {
+  0% {
+    transform: scale(0, 0);
+    background-color: transparent;
+  }
+  100% {
+    transform: scale(1, 1);
+    background-color: #0c8;
+  }
+}
+@keyframes hit {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0;
+    background-color: transparent;
+  }
+  10% {
+    transform: scale(1.2, 1.2);
+    opacity: 1;
+    background-color: #ff6022;
+    box-shadow: 0 0 0 0.5em var(--shadowColor);
+  }
+  100% {
+    transform: scale(0.7, 0.7);
+    opacity: 0.7;
+    background-color: #f27;
+    box-shadow: 0 0 0 0.5em var(--shadowColor);
+  }
+}
+@keyframes miss {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+    background-color: #73a1d0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0.8;
+    background-color: #1e3b59;
+  }
+}
+.hit-obj {
+  position: absolute;
+  visibility: visible;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: hit 1s forwards;
+}
+.ship-obj {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 90%;
+  border-radius: 15%;
+  animation: setShip 0.5s forwards;
+}
+.miss-obj {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: miss 1s forwards;
+}
 body {
-  margin: 60px auto;
-  width: 70%;
-  max-width: 950px;
+  --grid-measurements: 70vw;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #123;
+  background-image: linear-gradient(to bottom, black 0, #123 100%);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  backface-visibility: hidden;
+  font-family: sans-serif;
 }
-
-h1 {
-  font-size: 3em;
-  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+@media (min-aspect-ratio: 0.5) {
+  body {
+    --grid-measurements: 35vh;
+  }
 }
-
-p, button, input {
-  font-size: 1.5em;
-  line-height: 1.4em;
-  color: #333;
-margin-bottom:1em;
+.mode {
+  opacity: 0;
+  pointer-events: none;
 }
-
-#gameboard {
-position:relative;
-margin:0 auto 2em auto;
-width:500px;
-height:500px;
+.mode:target,
+.mode#start {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1;
 }
-
-#gameboard div {
-position:absolute;
--webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
--moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
-background: #f6f8f9; /* Old browsers */
-border: 1px solid #ddd;
-width:50px;
-height:50px;
+.mode#p1,
+.mode#p2 {
+  position: absolute;
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
 }
-
-.center {
+.mode#p1:target {
+  transform: translateX(50vw);
+}
+.mode#p1:target + #p2 {
+  transform: translateX(50vw);
+  z-index: 2;
+}
+.mode#p2 {
+  transform: translateX(50vw);
+  z-index: 1;
+}
+.mode#pause:target ~ #p1,
+.mode#pause:target ~ #p2 {
+  opacity: 0;
+}
+#start .battlefield {
+  left: 50vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#start ol {
+  list-style: decimal-leading-zero;
+  color: #f0a;
+  font-weight: 700;
+}
+#start ol li {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+#start ol li.enternames {
+  margin-bottom: 3em;
+}
+#start ol span,
+#start ol ul li,
+#start ol a {
+  color: #0c8;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+#start ol span:nth-of-type(even) {
+  color: #f0a;
+  margin: 0 0.5ch;
+}
+.mode:target ~ #start {
+  display: none;
+}
+#pause {
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.battlefield {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: var(--grid-measurements);
+  height: var(--grid-measurements);
+  margin: 0 auto 5vw;
+  border: 2px solid;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+.battlefield.player {
+  top: calc(var(--grid-measurements) + 150px);
+  border-color: transparent;
+}
+:target .battlefield.player {
+  border-color: #0c8;
+}
+.battlefield.enemy {
+  top: 100px;
+  border-color: transparent;
+}
+:target .battlefield.enemy {
+  border-color: #f0a;
+}
+[class^='field-'] {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+:target [class^='field-']:nth-of-type(even) {
+  background-color: #0e1d2b;
+}
+:target [class^='field-']:nth-of-type(odd) {
+  background-color: #101f2f;
+}
+[class^='field-'][class^='field-'][class$='-y2']:nth-of-type(odd) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y2']:nth-of-type(odd) {
+  background-color: #0d1a28;
+}
+[class^='field-'][class^='field-'][class$='-y2']:nth-of-type(even) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y2']:nth-of-type(even) {
+  background-color: #0c1824;
+}
+[class^='field-'][class^='field-'][class$='-y4']:nth-of-type(odd) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y4']:nth-of-type(odd) {
+  background-color: #0d1a28;
+}
+[class^='field-'][class^='field-'][class$='-y4']:nth-of-type(even) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y4']:nth-of-type(even) {
+  background-color: #0c1824;
+}
+[class^='field-'][class^='field-'][class$='-y6']:nth-of-type(odd) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y6']:nth-of-type(odd) {
+  background-color: #0d1a28;
+}
+[class^='field-'][class^='field-'][class$='-y6']:nth-of-type(even) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y6']:nth-of-type(even) {
+  background-color: #0c1824;
+}
+[class^='field-'][class^='field-'][class$='-y8']:nth-of-type(odd) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y8']:nth-of-type(odd) {
+  background-color: #0d1a28;
+}
+[class^='field-'][class^='field-'][class$='-y8']:nth-of-type(even) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y8']:nth-of-type(even) {
+  background-color: #0c1824;
+}
+[class^='field-'][class^='field-'][class$='-y10']:nth-of-type(odd) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y10']:nth-of-type(odd) {
+  background-color: #0d1a28;
+}
+[class^='field-'][class^='field-'][class$='-y10']:nth-of-type(even) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y10']:nth-of-type(even) {
+  background-color: #0c1824;
+}
+[class^='field-'][class^='field-'][class$='-y12']:nth-of-type(odd) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y12']:nth-of-type(odd) {
+  background-color: #0d1a28;
+}
+[class^='field-'][class^='field-'][class$='-y12']:nth-of-type(even) {
+  background-color: transparent;
+}
+:target [class^='field-'][class^='field-'][class$='-y12']:nth-of-type(even) {
+  background-color: #0c1824;
+}
+[class^='field-'] [class^='indicator-'] {
+  display: none;
+}
+:target [class^='field-'] [class^='indicator-'] {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: calc(var(--grid-measurements) / 12);
+  height: calc(var(--grid-measurements) / 12);
+  color: #1e3b59;
+  pointer-events: none;
+}
+[class^='field-'] [class^='indicator-'].indicator-line {
+  top: -1.5em;
+  align-items: flex-start;
+}
+[class^='field-'] [class^='indicator-'].indicator-col {
+  left: -2.3em;
+  align-items: center;
+}
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+.check + .check-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.check.ship:checked {
+  pointer-events: none;
+}
+:target .player .check.ship:checked + .check-helper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 90%;
+  border-radius: 15%;
+  animation: setShip 0.5s forwards;
+}
+:target .enemy .check.ship:checked + .check-helper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: miss 1s forwards;
+}
+.check.ship:checked ~ .hit {
+  pointer-events: all;
+}
+.check.hit {
+  position: absolute;
+  top: calc(-1 * (var(--grid-measurements) + 50px));
+  left: 50vw;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#p2 .check.hit,
+#p1:target .check.hit {
+  left: 0;
+}
+#p1:not(:target) .check.hit + .check-helper::before {
+  left: 50vw;
+}
+.check.hit:checked {
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+}
+.check.hit:checked + .check-helper::before {
+  content: "";
+  position: absolute;
+  visibility: visible;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: hit 1s forwards;
+  top: calc(-1 * (var(--grid-measurements) + 50px));
+}
+.check.hit:checked + .check-helper::after {
+  content: "";
+  position: absolute;
+  visibility: visible;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: hit 1s forwards;
+  top: -2px;
+  left: -2px;
+}
+#p1:target .check.hit:checked + .check-helper::before,
+#p1:target ~ #p2 .check.hit:checked + .check-helper::after,
+#p1:not(:target) .check.hit:checked + .check-helper::after,
+#p2:target .check.hit:checked + .check-helper::before {
+  display: none;
+}
+#p1:target .battlefield.p1 .check.hit,
+#p2:target .battlefield.p2 .check.hit {
+  display: none;
+}
+.status {
+  position: relative;
+  top: 23em;
+  display: flex;
+  justify-content: center;
+  z-index: 2000;
+}
+.status .status-link,
+.status .player-link {
+  display: none;
+}
+.status .player-name {
+  position: relative;
+  padding: 3px;
+  border: 1px solid #f0a;
+  background: transparent;
+  color: #0c8;
+}
+.status .player-name::placeholder {
+  color: #0c8;
+  opacity: 1;
+}
+.status .player-name:first-of-type {
+  margin-right: 1em;
+}
+.mode#pause:target ~ .status {
+  top: 40vh;
+  width: calc(100% - 40px);
+  padding: 0 20px;
   text-align: center;
-  border: 3px solid green;
+  z-index: 2000;
+}
+.mode#pause:target ~ .status .player-name,
+.mode#pause:target ~ .status .player-link {
+  position: absolute;
+  display: block;
+  width: 80%;
+  max-width: 500px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+.mode#pause:target ~ .status .player-name:nth-of-type(even),
+.mode#pause:target ~ .status .player-link:nth-of-type(even) {
+  top: 60px;
+}
+.mode#pause:target ~ .status .player-name {
+  border: 0;
+  border-bottom: 1px solid #f0a;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.mode#p1:target ~ .status,
+.mode#p2:target ~ .status {
+  display: block;
+  top: 10px;
+}
+.mode#p1:target ~ .status .player-name,
+.mode#p2:target ~ .status .player-name,
+.mode#p1:target ~ .status .status-link,
+.mode#p2:target ~ .status .status-link {
+  display: block;
+  padding: 0 10px;
+  border: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.mode#p1:target ~ .status .status-link,
+.mode#p2:target ~ .status .status-link {
+  display: inline-block;
+  color: #f0a;
+  text-decoration: none;
+  pointer-events: all;
+}
+.mode#p1:target ~ .status #name2 {
+  display: none;
+}
+.mode#p2:target ~ .status #name1 {
+  display: none;
+}
+h1 {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #0c8;
+  transform: translateX(calc(50vw - 60px));
+  transition: transform 0.4s ease-out;
+}
+h1 span:nth-of-type(even) {
+  color: #f0a;
+  text-transform: lowercase;
+}
+h1::before {
+  margin-right: 1ch;
+  color: #f0a;
+}
+:target ~ h1 {
+  transform: translateX(calc(100vw - 130px));
 }
