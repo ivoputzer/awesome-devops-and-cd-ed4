@@ -12,7 +12,7 @@
 - [@ivoputzer](https://github.com/ivoputzer)
 - [@matteomarchiori](https://github.com/matteomarchiori)
 - [@lucafumagalli](https://github.com/lucafumagalli)
-- Pietro V
+- [@pietro](https://github.com/pietrovassallo-bip)
 - Giorgio
 - [@liviobi](https://github.com/liviobi)
 - Andrea M
@@ -25,3 +25,4 @@
 - [@mstraface](https://github.com/mstraface)
 - [Matteo R.](https://github.com/mr-bip)
 - Devlogs
+- Tommaso
