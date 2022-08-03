@@ -9,7 +9,7 @@
 
 ### Contributors
 
-- Ivo
+- [@ivoputzer](https://github.com/ivoputzer)
 - [@matteomarchiori](https://github.com/matteomarchiori)
 - Luca
 - Pietro V
