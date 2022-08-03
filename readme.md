@@ -17,7 +17,7 @@
 - [@liviobi](https://github.com/liviobi)
 - Andrea M
 - [@pcoletta](https://github.com/pcoletta)
-- Serghei
+- [@ssocolovschi](https://github.com/ssocolovschi)
 - [@mattiafederici](https://github.com/mattiafederici)
 - [@robertomanzobip](https://github.com/robertomanzo-bip)
 - [@tommasopiferi-bip](https://github.com/tommasopiferi-bip)
