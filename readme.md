@@ -18,7 +18,7 @@
 - Andrea M
 - [@pcoletta](https://github.com/pcoletta)
 - Serghei
-- Mattia
+- [@mattiafederici](https://github.com/mattiafederici)
 - Roberto
 - Tommaso
 - Francesco
