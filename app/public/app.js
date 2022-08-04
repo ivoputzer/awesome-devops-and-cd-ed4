@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const chatTextInput = document.getElementById('chatTextInput')
+  const chatTextSend = document.getElementById('chatTextSend')
+
   const userGrid = document.querySelector('.grid-user')
   const computerGrid = document.querySelector('.grid-computer')
   const displayGrid = document.querySelector('.grid-display')
@@ -79,6 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // FIXME
     const socket = io('ws://' + window.location.hostname + ':1235');
 
+
+    console.info('startMultiPlayer() has been called')
+
+
+
+    chatTextSend.addEventListener('click', event => {
+      socket.emit('game-message', chatTextInput.value)
+      chatTextInput.value = ''
+    })
+
+
     // Get your player number
     socket.on('player-number', num => {
       if (num === -1) {
@@ -124,6 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // On Timeout
     socket.on('timeout', () => {
       infoDisplay.innerHTML = 'You have reached the 10 minute limit'
+    })
+
+    socket.on('game-message-broadcast', (data) => {
+      const chatBox = document.querySelector('.player.chat')
+      chatBox.innerText = `Enemy: ${data}`
+      setTimeout(() => chatBox.innerText = '', 2500)
     })
 
     // Ready button click

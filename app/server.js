@@ -49,6 +49,15 @@ io.on('connection', socket => {
     socket.broadcast.emit('player-connection', playerIndex)
   })
 
+
+
+  socket.on('game-message', data => {
+    console.log('game-message received:', data)
+    socket.broadcast.emit('game-message-broadcast', data)
+  })
+
+
+
   // On Ready
   socket.on('player-ready', () => {
     socket.broadcast.emit('enemy-ready', playerIndex)

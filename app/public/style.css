@@ -310,3 +310,10 @@ body {
 .enemys-go .battleship-grid.grid-user {
   border: 5px solid red;
 }
+
+
+.chat {
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+}

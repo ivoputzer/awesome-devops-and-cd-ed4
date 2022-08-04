@@ -8,8 +8,6 @@
     <script>
       let gameMode = 'multiPlayer'
     </script>
-    <!-- <script src="/socket.io/socket.io.js"></script> -->
-
     <script src="../../node_modules/socket.io-client/dist/socket.io.js" charset="utf-8"></script>
     <script type="module" src="app.js" charset="utf-8"></script>
   </head>
@@ -20,14 +18,21 @@
         <div class="connected">Connected</div>
         <div class="ready">Ready</div>
       </div>
-
       <div class="player p2">
         Player 2
         <div class="connected">Connected</div>
         <div class="ready">Ready</div>
       </div>
     </div>
+    <div class="container">
+      <div class="player chat"></div>
+    </div>
+    <div class="container">
+      <input id="chatTextInput" type="text">
+      &nbsp;
+      <button id="chatTextSend">send</button>
 
+    </div>
     <div class="container">
       <div class="battleship-grid grid-user"></div>
       <div class="battleship-grid grid-computer"></div>
