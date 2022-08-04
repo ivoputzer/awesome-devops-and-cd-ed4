@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ready button click
     startButton.addEventListener('click', () => {
       if(allShipsPlaced) playGameMulti(socket)
-      else infoDisplay.innerHTML = "Please place all ships"
+      else infoDisplay.innerHTML = "Please place all ships in the upper left frame 👇"
     })
 
     // Setup event listeners for firing

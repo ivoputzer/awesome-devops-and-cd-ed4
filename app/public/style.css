@@ -317,3 +317,14 @@ body {
   border-radius: 5px;
   padding: 5px;
 }
+
+#info {
+  background: #00aaff;
+  color: white;
+  padding: 25px;
+}
+
+.field-name {
+  text-align: center;
+  font-weight: bolder;
+}
