@@ -1,5 +1,51 @@
-- name: Clone battleship repo
-  ansible.builtin.git:
-    repo: https://github.com/ivoputzer/awesome-devops-and-cd-ed4
-    dest: /
+  - name: Clone battleship repo
+    ansible.builtin.git:
+      repo: https://github.com/ivoputzer/awesome-devops-and-cd-ed4
+      dest: /battleship
+
+  - name: Install the gpg key for nodejs LTS
+    apt_key:
+      url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      state: present
+
+  - name: Install the nodejs LTS repos
+    apt_repository:
+      repo: "deb https://deb.nodesource.com/node_16.x {{ ansible_distribution_release }} main"
+      state: present
+      update_cache: yes
+
+  - name: Update apt repo and cache
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: Install the nodejs
+    apt:
+      name: nodejs
+      state: present
+
+  - name: Install net-tools
+    package:
+      name: net-tools
+      state: present
+
+  - name: install npm dependencies
+    npm:
+      path: /battleship
+
+  - name: kill node
+    ignore_errors: yes
+    ansible.builtin.shell: killall node
+
+  - name: npm run dev
+    ansible.builtin.command:
+      cmd: npm run dev
+      chdir: /battleship
+    async: 1000
+    poll: 0
+
+  - name: npm run start
+    ansible.builtin.command:
+      cmd: npm run start
+      chdir: /battleship
+    async: 1000
+    poll: 0
 

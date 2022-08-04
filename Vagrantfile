@@ -11,7 +11,9 @@ Vagrant.configure("2") do |config|
     virtualbox.gui = false
   end
 
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 1234, host: 8080
+  config.vm.network "forwarded_port", guest: 1235, host: 8088
+
   config.vm.network "private_network", ip: "192.168.56.2"
 
   # config.vm.provision "shell", inline: <<-SHELL
