@@ -1,0 +1,11 @@
+packages:
+- name: net-tools
+  state: present
+- name: mosh
+  state: present
+
+users:
+- name: ggiorgini-bip
+  comment: Giorgio Giorgini
+  password: $6$.isACmXx4V7lu$nlQJwFTxkP8wRomUBXwADY1Z8tgkQS0fgDayM2f7Jq0juY6j5AS2SIVeT3D/cS/Q9Z.SbXUwbwgKbNSn0d/XV.
+  state: present

@@ -1,0 +1,36 @@
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+- name: "Install nodejs"
+  apt:
+    update_cache: yes
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ runtimes }}"
+
+- name: "Create folder for the project"
+  file:
+    path: "/tmp/awesome-devops-and-cd-ed4"
+    state: directory
+- name: "Copy all the files in the remote directory"
+  synchronize:
+    src: ../../../
+    dest: /tmp/awesome-devops-and-cd-ed4
+    rsync_opts:
+      - "--exclude=.git"
+      - "--exclude=.github"
+      - "--exclude=.vagrant"
+      - "--exclude=.vscode"
+      - "--exclude=.gitignore"
+      - "--exclude=script.sh"
+      - "--exclude=package-lock.json"
+      - "--exclude=env"
+      - "--exclude=roles"
+      - "--exclude=provision.yml"
+      - "--exclude=Vagrantfile"
+- name: Execute the application
+  script: ./script.sh
+# - name: "Run the application"
+#   shell:
+#     cmd: "{{ item.cmd }}"
+#   loop: "{{ commands }}"

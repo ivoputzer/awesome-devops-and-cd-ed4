@@ -1,0 +1,10 @@
+runtimes:
+- name: nodejs
+  state: latest
+# commands:
+# - cmd: killall node || true
+# - cmd: cd /tmp/awesome-devops-and-cd-ed4
+# - cmd: /usr/bin/npm install
+# - cmd: /usr/bin/npm run build
+# - cmd: /usr/bin/npm run dev
+# - cmd: /usr/bin/npm run start

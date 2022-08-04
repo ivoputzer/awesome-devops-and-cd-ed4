@@ -1,0 +1,6 @@
+[vagrant]
+192.168.56.2
+
+[vagrant:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_private_key_file=.vagrant\machines\default\virtualbox\private_key
