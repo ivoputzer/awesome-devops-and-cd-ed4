@@ -475,11 +475,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if ((destroyerCount + submarineCount + cruiserCount + battleshipCount + carrierCount) === 50) {
-      infoDisplay.innerHTML = "YOU WIN"
+      infoDisplay.innerHTML = "YOU WON! To play again <a href=\"/\">click here</a>!"
       gameOver()
     }
     if ((cpuDestroyerCount + cpuSubmarineCount + cpuCruiserCount + cpuBattleshipCount + cpuCarrierCount) === 50) {
-      infoDisplay.innerHTML = `${enemy.toUpperCase()} WINS`
+      infoDisplay.innerHTML = `${enemy.toUpperCase()} WON! To play again <a href=\"/\">click here</a>!`
       gameOver()
     }
   }
