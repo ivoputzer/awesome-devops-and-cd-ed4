@@ -1,0 +1,28 @@
+- hosts: all
+  become: true
+  tasks:
+   - name: "update machine"
+     command: sudo apt-get update
+
+   - name: Download foo.conf
+     ansible.builtin.get_url:
+       url: https://deb.nodesource.com/setup_16.x
+       dest: /tmp/nodesource_setup.sh
+       mode: 'u=rwx,g=r,o=r'
+
+   - name: "execute node install"
+     ansible.builtin.shell: /tmp/nodesource_setup.sh
+
+   - name: "update machine"
+     command: apt install nodejs && node -v
+
+   - name: Clone the repo
+     ansible.builtin.git:
+       repo: https://github.com/ivoputzer/awesome-devops-and-cd-ed4.git
+       dest: /etc/game
+       # separate_git_dir: /src/ansible-examples.git
+
+   - name: Install dependences
+     npm: path=/etc/game executable=/usr/bin/npm
+   #- name: "update machine"
+   #  command: npm install /etc/rick_rolled/game
