@@ -75,7 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Multiplayer
   function startMultiPlayer() {
-    const socket = io();
+    // const socket = io('ws://' + window.location.host + '/socket');
+    // FIXME
+    const socket = io('ws://' + window.location.hostname + ':1235');
 
     // Get your player number
     socket.on('player-number', num => {
