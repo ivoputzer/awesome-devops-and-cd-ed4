@@ -2,8 +2,7 @@
   "name": "awesome-devops-and-cd-ed4",
   "version": "0.0.0-beta.0",
   "description": "",
-  "main": "index.mjs",
-  "type": "module",
+  "main": "app/server.js",
   "scripts": {
     "start": "nodemon app/server.js",
     "dev": "parcel serve app/public/index.html",
@@ -20,7 +19,7 @@
   },
   "homepage": "https://github.com/ivoputzer/awesome-devops-and-cd-ed4#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.1",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
