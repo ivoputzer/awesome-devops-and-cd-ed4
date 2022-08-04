@@ -15,6 +15,12 @@
 - `npm install`
 - `npm test`
 
+
+### Run
+
+- `npm run dev` # runs `parcel serve` which takes care of static assets
+- `npm run start` # using `nodemon` runs `server.js` which is based on http, express, socket.io
+
 ### Contributors
 
 - [@ivoputzer](https://github.com/ivoputzer)
