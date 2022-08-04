@@ -1,0 +1,5 @@
+- name: Clone battleship repo
+  ansible.builtin.git:
+    repo: https://github.com/ivoputzer/awesome-devops-and-cd-ed4
+    dest: /
+

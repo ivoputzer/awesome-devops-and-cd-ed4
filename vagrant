@@ -1,0 +1,10 @@
+[vagrant]
+192.168.56.2
+
+[vagrant:vars]
+host_key_checking=false
+ansible_ssh_user=vagrant
+ansible_ssh_private_key_file=.vagrant/machines/default/virtualbox/private_key
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_become=true
+ansible_become_user=root

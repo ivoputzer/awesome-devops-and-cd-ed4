@@ -1,0 +1,10 @@
+users:
+- name: lucafumagalli
+  comment: Luca Fumagalli
+  password: $6$QQ8NML41$FGgQtk3gClNlyQnft0WZSN87vEC.snp67nsw/skB7IAAwK9mjPAoAxEDKecNjiiEjpdCdl67jyI.HD9a6LXO/.
+  state: present
+
+- name: tommasopiferi-bip
+  comment: Tommaso Piferi
+  password: $6$xvgPyoQ6no$ecAcQUSOvTVWbU9KFUmxDLDt.YyZLhaOOjqnhuUDgP2mAHn1WKbOW.d7Jm4RQsIZxhKcEicGZRpJUPuFbGp3f1
+  state: present
