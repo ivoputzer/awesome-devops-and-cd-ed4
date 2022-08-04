@@ -318,6 +318,10 @@ body {
   padding: 5px;
 }
 
+.chat:empty, #info:empty {
+  display: none;
+}
+
 #info {
   background: #00aaff;
   color: white;
