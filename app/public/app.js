@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // On Timeout
     socket.on('timeout', () => {
-      infoDisplay.innerHTML = 'You have reached the 10 minute limit'
+      infoDisplay.innerHTML = 'You have reached the 10 minute limit! To play again <a href=\"/\">click here</a>!'
     })
 
     socket.on('game-message-broadcast', (data) => {
