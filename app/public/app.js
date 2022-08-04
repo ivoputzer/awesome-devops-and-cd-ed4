@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const chatTextInput = document.getElementById('chatTextInput')
   const chatTextSend = document.getElementById('chatTextSend')
+  const chatTextForm = document.getElementById('chatTextForm')
 
   const userGrid = document.querySelector('.grid-user')
   const computerGrid = document.querySelector('.grid-computer')
@@ -82,10 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // FIXME
     const socket = io('ws://' + window.location.hostname + ':1235');
 
-
     console.info('startMultiPlayer() has been called')
 
-
+    chatTextForm.addEventListener('submit', event => {
+      event.preventDefault();
+    })
 
     chatTextSend.addEventListener('click', event => {
       socket.emit('game-message', chatTextInput.value)
