@@ -2,6 +2,7 @@
   "name": "awesome-devops-and-cd-ed4",
   "version": "0.0.0-beta.0",
   "description": "",
+  "private": true,
   "scripts": {
     "start": "nodemon app/server.js",
     "build": "parcel build app/public/index.html",
