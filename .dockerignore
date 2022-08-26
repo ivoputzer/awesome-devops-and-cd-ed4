@@ -1,0 +1,14 @@
+.github
+.vagrant
+.vscode
+node_modules/
+roles/
+dist/
+*.md
+.npm*
+.dockerignore
+.gitignore
+.proxyrc
+Dockerfile
+Vagrantfile
+provision.yml

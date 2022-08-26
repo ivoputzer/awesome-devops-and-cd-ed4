@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 1234, host: 1234
   config.vm.network "forwarded_port", guest: 1235, host: 1235
 
-  config.vm.provision "ansible" do |ansible|
+  config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "provision.yml"
     ansible.verbose = "v"
     ansible.extra_vars = {

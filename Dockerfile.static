@@ -1,0 +1,15 @@
+FROM node:16
+
+WORKDIR /usr/src
+
+COPY package.json package-lock.json ./
+
+RUN npm install --no-progress \
+ && npm cache clean --force --silent
+
+COPY ./ ./
+
+EXPOSE 1234
+
+ENTRYPOINT [ "npm" ]
+CMD [ "run", "dev" ]
