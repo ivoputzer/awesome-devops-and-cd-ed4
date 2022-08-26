@@ -1,4 +1,4 @@
-# Vagrant Project Box
+# Docker Project Box
 
 Let's do the provisioning of a new vagrant machine
 

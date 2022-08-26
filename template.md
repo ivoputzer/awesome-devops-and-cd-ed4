@@ -13,22 +13,4 @@ Create a basic template (html/css/js) or mockup for the `battleship` game that w
 > TIMEBOX 1:30 h
 > 16.40
 
-### Team 1
-Roberto Manzo
-Andrea Montemaggiore
-Biondo Livio
-Coletta Piervito
-Straface Mariangela
 
-### Team 2
-Marchiori Matteo
-De Montis Francesco
-Federici Mattia
-Fumagalli Luca2
-
-### Team 3
-Piferi Tomaso
-Rocco Matteo
-Socolovschi Serghei
-Vassallo Pietro
-Giorgini Giorgio
