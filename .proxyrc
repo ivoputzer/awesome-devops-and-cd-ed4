@@ -1,9 +1,0 @@
-{
-  "/socket": {
-    "target": "ws://127.0.0.1:1235",
-    "ws": true,
-    "pathRewrite": {
-      "^/socket": ""
-    }
-  }
-}
