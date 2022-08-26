@@ -1,0 +1,23 @@
+  - name: Install the gpg key for nodejs LTS
+    apt_key:
+      url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      state: present
+
+  - name: Install the nodejs LTS repos
+    apt_repository:
+      repo: "deb https://deb.nodesource.com/node_16.x {{ ansible_distribution_release }} main"
+      state: present
+      update_cache: yes
+
+  - name: Update apt repo and cache
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: Install the nodejs
+    package:
+      name: nodejs
+      state: present
+
+  - name: Install net-tools
+    package:
+      name: net-tools
+      state: present

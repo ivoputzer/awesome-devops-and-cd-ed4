@@ -1,5 +1,8 @@
 - hosts: all
+  become: yes
   roles:
   - role: users
     tags: [system, users, ssh]
+  - role: common
   - role: battleship
+

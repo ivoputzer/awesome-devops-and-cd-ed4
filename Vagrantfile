@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
     ansible.verbose = "v"
     ansible.extra_vars = {
       "ansible_become": true,
-      "ansible_become_user": "root",
+      "ansible_become_user": "vagrant",
     }
   end
 end

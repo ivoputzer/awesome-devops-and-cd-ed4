@@ -2,49 +2,30 @@
     ansible.builtin.git:
       repo: https://github.com/ivoputzer/awesome-devops-and-cd-ed4
       dest: /battleship
+      force: false
 
-  - name: Install the gpg key for nodejs LTS
-    apt_key:
-      url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-      state: present
+  # - name: install npm dependencies
+  #   npm:
+  #     path: /battleship
 
-  - name: Install the nodejs LTS repos
-    apt_repository:
-      repo: "deb https://deb.nodesource.com/node_16.x {{ ansible_distribution_release }} main"
-      state: present
-      update_cache: yes
-
-  - name: Update apt repo and cache
-    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-
-  - name: Install the nodejs
-    apt:
-      name: nodejs
-      state: present
-
-  - name: Install net-tools
-    package:
-      name: net-tools
-      state: present
-
-  - name: install npm dependencies
-    npm:
-      path: /battleship
+  - name: npm install
+    ignore_errors: yes
+    ansible.builtin.shell: sudo npm install
 
   - name: kill node
     ignore_errors: yes
-    ansible.builtin.shell: killall node
+    ansible.builtin.shell: sudo killall node
 
   - name: npm run dev
     ansible.builtin.command:
-      cmd: npm run dev
+      cmd: sudo npm run dev
       chdir: /battleship
     async: 1000
     poll: 0
 
   - name: npm run start
     ansible.builtin.command:
-      cmd: npm run start
+      cmd: sudo npm run start
       chdir: /battleship
     async: 1000
     poll: 0
