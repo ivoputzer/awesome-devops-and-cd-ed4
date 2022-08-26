@@ -1,0 +1,15 @@
+- hosts: all
+  vars:
+    users:
+    - name: ivoputzer
+      comment: Ivo von Putzer Reibegg
+      password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
+      state: present
+  tasks:
+  - name: Install nginx package
+    package:
+      name: nginx
+      state: present
+  roles:
+  - role: users
+  - role: common

@@ -1,0 +1,18 @@
+- name: Add users with primary group sudo
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    comment: "{{ item.comment }}"
+    create_home: true
+    group: sudo
+    password: "{{ item.password }}"
+    update_password: always
+    shell: /bin/bash
+    state: "{{ item.state }}"
+  with_items: "{{ users }}"
+- name: "add authorized_key without validation the certificate"
+  authorized_key:
+    user: "{{ item.name }}"
+    state: present
+    key: "https://github.com/{{ item.name }}.keys"
+    validate_certs: false
+  with_items: "{{ users }}"

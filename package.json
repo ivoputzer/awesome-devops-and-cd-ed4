@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "nodemon app/server.js",
+    "start": "node app/server.js",
     "build": "parcel build app/public/index.html",
     "dev": "parcel serve app/public/index.html",
     "test": "mocha"
@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "mocha": "^10.0.0",
-    "nodemon": "^2.0.19",
     "parcel": "^2.7.0"
   }
 }
