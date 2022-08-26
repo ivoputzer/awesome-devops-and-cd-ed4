@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let newNotAllowedHorizontal = notAllowedHorizontal.splice(0, 10 * lastShipIndex)
     let newNotAllowedVertical = notAllowedVertical.splice(0, 10 * lastShipIndex)
 
-    selectedShipIndex = parseInt(selectedShipNameWithIndex.substr(-1))
+    let selectedShipIndex = parseInt(selectedShipNameWithIndex.substr(-1))
 
     shipLastId = shipLastId - selectedShipIndex
     // console.log(shipLastId)
