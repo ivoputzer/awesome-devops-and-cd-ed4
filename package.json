@@ -5,8 +5,6 @@
   "private": true,
   "scripts": {
     "start": "node app/server.js",
-    "build": "parcel build app/public/index.html",
-    "dev": "parcel serve app/public/index.html",
     "test": "mocha"
   },
   "repository": {
