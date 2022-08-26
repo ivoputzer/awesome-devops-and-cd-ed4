@@ -1,0 +1,10 @@
+FROM python:alpine
+LABEL maintainer="Ivo von Putzer Reibegg <ivo.putzer@gmail.com>"
+
+WORKDIR /usr/src
+
+COPY public/ ./
+EXPOSE 7000
+
+ENTRYPOINT [ "python" ]
+CMD [ "-m", "http.server", "7000"]
