@@ -5,6 +5,8 @@
   "private": true,
   "scripts": {
     "start": "node app/server.js",
+    "docker": "docker run -p 3000:80 -it $npm_package_name",
+    "docker:build": "docker build -t $npm_package_name .",
     "test": "mocha"
   },
   "repository": {

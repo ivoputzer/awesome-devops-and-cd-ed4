@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Multiplayer
   function startMultiPlayer() {
-    // const socket = io('ws://' + window.location.host + '/socket');
+    const socket = io('ws://' + window.location.host);
     // FIXME
-    const socket = io('ws://' + window.location.hostname + ':1235');
+    // const socket = io('ws://' + window.location.hostname + ':1235');
 
     console.info('startMultiPlayer() has been called')
 
