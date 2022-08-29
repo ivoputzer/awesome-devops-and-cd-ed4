@@ -6,6 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Lint Ansible Playbook
-        uses: ansible-community/ansible-lint-action@main
-        with:
-          path: provision.yml
+        run: ansible-playbook provision.yml --syntax-check
