@@ -5,6 +5,10 @@
       comment: Ivo von Putzer Reibegg
       password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
       state: present
+    - name: matteomarchiori
+      comment: Matteo Marchiori
+      password: $5$MqzZ9THNx7WVHZpq$BZ6TEmfPf.dpezcZbM4IMuWr75VV3bQn4AjM60FEjB/
+      state: present
   roles:
   - role: users
   - role: docker
