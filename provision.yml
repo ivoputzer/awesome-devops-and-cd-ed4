@@ -13,6 +13,9 @@
       comment: Francesco De Montis
       password: $5$sUzZcwX65tfUXhXf$Z0mM5n3eDX/ykVhgqFQE33.zhB7gl0roa5AlJ9c6D8/
       state: present
+    - name: ssocolovschi
+      comment: Serghei Socolovschi
+      password: $5$yKGGnUNOLRXdtHy/$1mApzYbD7YH1fdoB5.SdgrQrzE68WL38.te2torX5BB
   roles:
   - role: users
   - role: docker
