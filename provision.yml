@@ -13,3 +13,4 @@
   roles:
   - role: users
   - role: common
+  - role: docker

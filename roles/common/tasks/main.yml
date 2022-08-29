@@ -27,26 +27,18 @@
   npm:
     path: /vagrant
 
-- name: run battleship game
-  command:
-    chdir: /vagrant
-    cmd: npm run start
-  async: 1000
-  poll: 0
+# - name: run battleship game
+#   command:
+#     chdir: /vagrant
+#     cmd: npm run start
+#   async: 1000
+#   poll: 0
 
-- name: make sure battleship is actually running
-  shell: ps aux | grep node
-  register: app_status
+# - name: make sure battleship is actually running
+#   shell: ps aux | grep node
+#   register: app_status
 
-- debug: msg={{ app_status.stdout_lines }}
-
-
-
-
-
-
-
-
+# - debug: msg={{ app_status.stdout_lines }}
 
 # - name: Install mosh
 #   apt:

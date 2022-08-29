@@ -1,0 +1,52 @@
+- name: Remove previous versions of Docker
+  apt:
+    name:
+      - docker
+      - docker-engine
+      - docker.io
+      - containerd
+      - runc
+    state: absent
+
+- name: apt-update
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+
+- name: Install dependencies for Docker
+  apt:
+    name:
+      - curl
+      - apt-transport-https
+      - ca-certificates
+      - software-properties-common
+    state: present
+
+- name: Create keyrings directory
+  shell: mkdir -p /etc/apt/keyrings
+
+- name: Add Docker's official GPG key
+  shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+- name: Setup the repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
+    state: present
+    update_cache: yes
+
+- name: apt-update
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+
+- name: Install Docker engine
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-compose-plugin
+    state: present
+
+- name : Add user to docker group
+  shell: sudo usermod -aG docker ${USER} && su - ${USER}
