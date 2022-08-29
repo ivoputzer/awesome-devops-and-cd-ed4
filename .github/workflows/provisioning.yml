@@ -1,0 +1,16 @@
+name: Provisioning
+on:
+  push:
+    branch: [master]
+jobs:
+  ansible:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: refs/head/master
+    - name: Provision Production
+      run: ansible -i env/production all -m ping --extra-vars="ansible_user=${{ secrets.ansible_user}} ansible_password=${{ secrets.ansible_password}}"
+      env:
+        ANSIBLE_HOST_KEY_CHECKING: False
+        ANSIBLE_SSH_COMMON_ARGS: '-o PreferredAuthentications=password'
