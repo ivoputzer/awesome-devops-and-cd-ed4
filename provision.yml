@@ -5,6 +5,10 @@
       comment: Ivo von Putzer Reibegg
       password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
       state: present
+    - name: liviobi
+      comment: Livio Biondo
+      password: $5$oA85yJcMa4/4SMQg$7JLnJVuWm6/la8Q.09a5QMqb7P8e.mubd7cphF89XJ3
+      state: present  
   roles:
   - role: users
   - role: docker
