@@ -5,6 +5,10 @@
       comment: Ivo von Putzer Reibegg
       password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
       state: present
+    - name: ggiorgini-bip
+      comment: Giorgio Giorgini
+      password: $5$oQMCo1RO71pMn0Ud$abNs2PKxvhoBzgaTrjdi7Mlyt/Vcl7xrVv64Pwr5EEA
+      state: present
   roles:
   - role: users
   - role: docker
