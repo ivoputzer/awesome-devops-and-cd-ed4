@@ -5,6 +5,10 @@
       comment: Ivo von Putzer Reibegg
       password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
       state: present
+    - name: lucafumagalli
+      comment: Luca Fumagalli
+      password: $5$M9DsVLVotJi6hZ6z$cw5k4uZQuPe3yLICfQuKEuE/Zedvye7ZvgoJFE05PU0
+      state: present
   roles:
   - role: users
   - role: docker
