@@ -16,6 +16,7 @@
     - name: ssocolovschi
       comment: Serghei Socolovschi
       password: $5$yKGGnUNOLRXdtHy/$1mApzYbD7YH1fdoB5.SdgrQrzE68WL38.te2torX5BB
+      state: present
   roles:
   - role: users
   - role: docker
