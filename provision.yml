@@ -5,6 +5,11 @@
       comment: Ivo von Putzer Reibegg
       password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
       state: present
+      
+     -name: mstraface
+       comment: Mariangela Straface
+       password: $5$uIhyaer6YxodHCtj$6wCb18g3IdzHB2O3voBib0sa.083IWy/7ECOp9vdz9D
+       state: present
   roles:
   - role: users
   - role: docker
