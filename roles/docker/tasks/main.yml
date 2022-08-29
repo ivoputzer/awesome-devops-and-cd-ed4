@@ -43,6 +43,7 @@
       - docker-ce-cli
       - containerd.io
       - docker-compose-plugin
+      - docker-compose
     state: present
 
 - name : Add user to docker group
