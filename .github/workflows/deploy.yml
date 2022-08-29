@@ -21,7 +21,7 @@ jobs:
         run: docker save -o ${GITHUB_SHA}.tar awesome-devops-and-cd-ed4
 
       - name: Ansible deploy
-        run: ansible-playbook provision.yml --inventory-file env/production --extra-vars="ansible_user=${{ secrets.ansible_user}} ansible_password=${{ secrets.ansible_password}} github_sha=${GITHUB_SHA} github_repository_name=awesome-devops-and-cd-ed4"
+        run: ansible-playbook deploy.yml --inventory-file env/production --extra-vars="ansible_user=${{ secrets.ansible_user}} ansible_password=${{ secrets.ansible_password}} github_sha=${GITHUB_SHA} github_repository_name=awesome-devops-and-cd-ed4"
         env:
           ANSIBLE_HOST_KEY_CHECKING: False
           ANSIBLE_SSH_COMMON_ARGS: '-o PreferredAuthentications=password'
