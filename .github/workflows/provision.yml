@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Lint Ansible Playbook
+      - name: Ansible playbook syntax check
         run: ansible-playbook provision.yml --syntax-check
   provision:
     needs: lint
