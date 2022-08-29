@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Ansible playbook syntax check
         run: ansible-playbook deploy.yml --syntax-check
-  deploy:
+  deployx:
     needs: lint
     runs-on: ubuntu-latest
     - uses: actions/checkout@master
