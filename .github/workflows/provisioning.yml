@@ -1,7 +1,8 @@
 name: Provisioning
 on:
-  push:
-    branch: [master]
+  workflow_dispatch:
+    tags:
+      description: manual provisioning
 jobs:
   ansible:
     runs-on: ubuntu-latest
