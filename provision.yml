@@ -10,6 +10,11 @@
      comment: Piervito Coletta
      password: $5$7IliVXi8WfrV6cv9$Qh9YwPMApwjhcgyrghSw9RgNwfP4BAZb8k8EkU.Kn.1
      state:present
+     
+    - name: fdemontis
+      comment: Francesco De Montis
+      password: $5$sUzZcwX65tfUXhXf$Z0mM5n3eDX/ykVhgqFQE33.zhB7gl0roa5AlJ9c6D8/
+      state: present
   roles:
   - role: users
   - role: docker
