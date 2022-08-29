@@ -1,14 +1,46 @@
 - hosts: all
   vars:
     users:
-    - name: ivoputzer
-      comment: Ivo von Putzer Reibegg
-      password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
-      state: present
-    - name: matteomarchiori
-      comment: Matteo Marchiori
-      password: $5$MqzZ9THNx7WVHZpq$BZ6TEmfPf.dpezcZbM4IMuWr75VV3bQn4AjM60FEjB/
-      state: present
+      - name: ivoputzer
+        comment: Ivo von Putzer Reibegg
+        password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
+        state: present
+      - name: pcoletta
+        comment: Piervito Coletta
+        password: $5$7IliVXi8WfrV6cv9$Qh9YwPMApwjhcgyrghSw9RgNwfP4BAZb8k8EkU.Kn.1
+        state: present
+      - name: fdemontis
+        comment: Francesco De Montis
+        password: $5$sUzZcwX65tfUXhXf$Z0mM5n3eDX/ykVhgqFQE33.zhB7gl0roa5AlJ9c6D8/
+        state: present
+      - name: ssocolovschi
+        comment: Serghei Socolovschi
+        password: $5$yKGGnUNOLRXdtHy/$1mApzYbD7YH1fdoB5.SdgrQrzE68WL38.te2torX5BB
+        state: present
+      - name: mstraface
+        comment: Mariangela Straface
+        password: $5$uIhyaer6YxodHCtj$6wCb18g3IdzHB2O3voBib0sa.083IWy/7ECOp9vdz9D
+        state: present
+      - name: pietrovassallo-bip
+        comment: pietro vassallo
+        password: $5$WYRDK109.dugfMEL$eXYXP1s5iK.GWBb2./fc.7Rdpbps2dOtQVHE54ROmN1
+        state: present
+      - name: mr-bip
+        comment: Matteo Rocco
+        password: $5$hJn3XPWdIpSb5Ral$Mn.SoIpCHlchxn2M/oCpmGSJO0EibKQr0ycOvsuGdt5
+        state: present
+      - name: tommasopiferi-bip
+        comment: Tommaso Piferi
+        password: $5$/OYUJ0rpoF.jlT/6$sjplgiXEBMn3Y7lWfoZZM4YC2gYpoky02vuuRYpZbnC
+        state: present
+      - name: ggiorgini-bip
+        comment: Giorgio Giorgini
+        password: $5$oQMCo1RO71pMn0Ud$abNs2PKxvhoBzgaTrjdi7Mlyt/Vcl7xrVv64Pwr5EEA
+        state: present
+      - name: matteomarchiori
+        comment: Matteo Marchiori
+        password: $5$MqzZ9THNx7WVHZpq$BZ6TEmfPf.dpezcZbM4IMuWr75VV3bQn4AjM60FEjB/
+        state: present
   roles:
-  - role: users
-  - role: docker
+    - role: users
+    - role: docker
