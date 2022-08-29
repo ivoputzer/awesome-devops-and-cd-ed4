@@ -52,3 +52,11 @@ npm run static:build
 npm run docker
 npm run static
 ```
+
+
+### Docker compose
+```shell
+git pull --rebase origin master
+
+docker compose up -d
+```
