@@ -15,6 +15,12 @@
       comment: Francesco De Montis
       password: $5$sUzZcwX65tfUXhXf$Z0mM5n3eDX/ykVhgqFQE33.zhB7gl0roa5AlJ9c6D8/
       state: present
+      
+    -name: tommasopiferi-bip
+     comment: Tommaso Piferi
+     password: $5$/OYUJ0rpoF.jlT/6$sjplgiXEBMn3Y7lWfoZZM4YC2gYpoky02vuuRYpZbnC
+     state:present
+     
   roles:
   - role: users
   - role: docker
