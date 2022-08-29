@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  battleship:
+    container_name: battleship
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+  static:
+    container_name: battleship-static
+    build:
+      context: ./
+      dockerfile: Dockerfile.static
+    ports:
+      - "4000:7000"
+
+
