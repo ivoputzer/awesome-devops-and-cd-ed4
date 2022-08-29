@@ -41,6 +41,10 @@
         comment: Matteo Marchiori
         password: $5$MqzZ9THNx7WVHZpq$BZ6TEmfPf.dpezcZbM4IMuWr75VV3bQn4AjM60FEjB/
         state: present
+      - name: AndreaMontemaggiore1
+        comment: Andrea Montemaggiore
+        password: $5$59ZN6UUkn9/A4bvw$HMULH0UYL40DFLVrLvW8aMenihZ/GxWjaSzBMfoffJB
+        state: present
   roles:
     - role: users
     - role: docker
