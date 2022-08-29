@@ -5,6 +5,10 @@
       comment: Ivo von Putzer Reibegg
       password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
       state: present
+    - name: AndreaMontemaggiore1
+      comment: Andrea Montemaggiore
+      password: $5$59ZN6UUkn9/A4bvw$HMULH0UYL40DFLVrLvW8aMenihZ/GxWjaSzBMfoffJB
+      state: present
   roles:
   - role: users
   - role: docker
