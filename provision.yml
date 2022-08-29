@@ -37,6 +37,10 @@
         comment: Giorgio Giorgini
         password: $5$oQMCo1RO71pMn0Ud$abNs2PKxvhoBzgaTrjdi7Mlyt/Vcl7xrVv64Pwr5EEA
         state: present
+      - name: matteomarchiori
+        comment: Matteo Marchiori
+        password: $5$MqzZ9THNx7WVHZpq$BZ6TEmfPf.dpezcZbM4IMuWr75VV3bQn4AjM60FEjB/
+        state: present
   roles:
     - role: users
     - role: docker
