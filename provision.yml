@@ -20,7 +20,7 @@
       - name: pietrovassallo-bip
         comment: pietro vassallo
         password: $5$WYRDK109.dugfMEL$eXYXP1s5iK.GWBb2./fc.7Rdpbps2dOtQVHE54ROmN1
-        state:present
+        state: present
   roles:
     - role: users
     - role: docker
