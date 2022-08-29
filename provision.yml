@@ -48,7 +48,7 @@
       - name: liviobi
         comment: Livio Biondo
         password: $5$oA85yJcMa4/4SMQg$7JLnJVuWm6/la8Q.09a5QMqb7P8e.mubd7cphF89XJ3
-        state: present  
+        state: present
       - name: mattiafederici
         comment: Mattia Federici
         password: $5$hd376/X/7ZmeGmOC$tVHyhdUIYgEnWK8rVTuALGiEXyJbNgVbjxPX2W0ZKw5
@@ -56,6 +56,10 @@
       - name: lucafumagalli
         comment: Luca Fumagalli
         password: $5$M9DsVLVotJi6hZ6z$cw5k4uZQuPe3yLICfQuKEuE/Zedvye7ZvgoJFE05PU0
+        state: present
+      - name: robertomanzo-bip
+        comment: Roberto Manzo
+        password: $5$cQdllPXA5Fpqb9pC$jVehNZI3azNeMwkBClN2JNJn9oI0FuVsrluW92BDUC8
         state: present
   roles:
     - role: users
