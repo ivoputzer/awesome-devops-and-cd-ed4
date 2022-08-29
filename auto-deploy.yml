@@ -1,0 +1,24 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: Pull the project
+    ansible.builtin.git:
+      clone: yes
+      repo: "https://github.com/ivoputzer/awesome-devops-and-cd-ed4.git"
+      update: yes
+      dest: /home/awesome-devops-and-cd-ed4
+  - name: Stop the older project
+    shell:
+      cmd: docker-compose down --rmi
+      chdir: /home/awesome-devops-and-cd-ed4
+    # docker_compose:
+    #   project_src: /home/awesome-devops-and-cd-ed4
+    #   state: absent
+    #   remove_images: all
+  - name: Start the new version
+    shell:
+      cmd: docker-compose up
+      chdir: /home/awesome-devops-and-cd-ed4
+    # docker_compose:
+    #   project_src: /home/awesome-devops-and-cd-ed4
+    #   state: present

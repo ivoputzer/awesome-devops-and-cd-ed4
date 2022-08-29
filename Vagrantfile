@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.boot_timeout = 600
   config.vm.network "private_network", ip: "192.168.50.5"
   config.vm.provision "ansible_local" do |ansible|
-    ansible.playbook = "provision.yml"
+    ansible.playbook = "auto-deploy.yml"
     ansible.verbose = "v"
     ansible.extra_vars = {
       "ansible_become": true,
