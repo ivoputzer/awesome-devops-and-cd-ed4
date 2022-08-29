@@ -1,0 +1,58 @@
+---
+- name: Uninstall old versions of docker
+  ansible.builtin.apt:
+    state: absent
+    name:
+      - docker
+      - docker-engine
+      - docker.io
+      - containerd
+      - runc
+
+- name: Install packages to allow apt to use https repositories
+  ansible.builtin.apt:
+    state: present
+    update_cache: yes
+    name:
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+
+- name: Add docker apt signing key
+  ansible.builtin.apt_key:
+    url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+    state: present
+
+- name: Add docker repository to apt sources list
+  ansible.builtin.apt_repository:
+    repo: "deb https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable"
+    state: present
+    filename: docker
+
+- name: Install docker and system dependencies
+  ansible.builtin.apt:
+    state: present
+    update_cache: yes
+    name:
+    - lsb-release
+    - gnupg
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    - python3-pip
+  notify: restart docker
+
+- name: Install python docker dependencies
+  pip:
+    name: docker
+    executable: pip3
+
+- name: Add users to the docker group
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    groups: docker
+    append: true
+    state: "{{ item.state }}"
+  with_items: "{{ users }}"
+
+
