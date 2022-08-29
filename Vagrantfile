@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = true
   config.vm.boot_timeout = 600
 
-  config.vm.provision "ansible" do |ansible|
+  config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "provision.yml"
     ansible.verbose = "v"
     ansible.extra_vars = {
