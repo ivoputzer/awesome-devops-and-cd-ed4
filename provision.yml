@@ -5,6 +5,11 @@
       comment: Ivo von Putzer Reibegg
       password: $6$IdVtXdaOmTYWw7xW$jQvaLuYWJobdC/k1dzmY61wyvYF1YLEl4AVzqUxAVVUik5HqflLbgI/ALnRsKBNPfgOzRw03zs742lo9HwYP.1
       state: present
+    
+    -name: pcoletta
+     comment: Piervito Coletta
+     password: $5$7IliVXi8WfrV6cv9$Qh9YwPMApwjhcgyrghSw9RgNwfP4BAZb8k8EkU.Kn.1
+     state:present
   roles:
   - role: users
   - role: docker
