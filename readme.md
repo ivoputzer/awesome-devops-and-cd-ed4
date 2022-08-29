@@ -1,15 +1,6 @@
 # Playroom Web App
 
-### Upcoming games
-
-- Battleship
-- Tic Tac Toe
-- Rock paper scissors
-- Connect 4
-
-
 ### Installation
-
 - `git clone git@github.com:ivoputzer/awesome-devops-and-cd-ed4.git`
 - `cd awesome-devops-and-cd-ed4`
 - `npm install`
@@ -17,9 +8,20 @@
 
 
 ### Run
-
 - `npm run dev` # runs `parcel serve` which takes care of static assets
 - `npm run start` # using `nodemon` runs `server.js` which is based on http, express, socket.io
+
+
+### How to generate a `password` hash for provision.yml
+```shell
+docker run -it alpine:latest /usr/bin/mkpasswd --method=sha-512
+
+
+# - name: <github-username>
+#   comment: <full-name>
+#   password: <generated-password-hash>
+#   state: present
+```
 
 ### Contributors
 
