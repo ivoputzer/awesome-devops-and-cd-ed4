@@ -45,6 +45,10 @@
         comment: Andrea Montemaggiore
         password: $5$59ZN6UUkn9/A4bvw$HMULH0UYL40DFLVrLvW8aMenihZ/GxWjaSzBMfoffJB
         state: present
+      - name: liviobi
+        comment: Livio Biondo
+        password: $5$oA85yJcMa4/4SMQg$7JLnJVuWm6/la8Q.09a5QMqb7P8e.mubd7cphF89XJ3
+        state: present  
   roles:
     - role: users
     - role: docker
