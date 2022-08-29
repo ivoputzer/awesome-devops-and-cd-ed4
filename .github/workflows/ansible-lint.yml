@@ -1,6 +1,5 @@
 name: Ansible Lint
 on: [push, pull_request]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,5 +8,4 @@ jobs:
       - name: Lint Ansible Playbook
         uses: ansible/ansible-lint-action@master
         with:
-          targets:
-            - provision.yml
+          targets: provision.yml
