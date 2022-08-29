@@ -38,3 +38,17 @@
 - [@fdemontis](https://github.com/fdemontis)
 - [@mstraface](https://github.com/mstraface)
 - [@Matteo R.](https://github.com/mr-bip)
+
+
+
+### Pull changes
+
+```shell
+git pull --rebase origin master
+
+npm run docker:build
+npm run static:build
+
+npm run docker
+npm run static
+```
