@@ -49,6 +49,10 @@
         comment: Livio Biondo
         password: $5$oA85yJcMa4/4SMQg$7JLnJVuWm6/la8Q.09a5QMqb7P8e.mubd7cphF89XJ3
         state: present  
+      - name: mattiafederici
+        comment: Mattia Federici
+        password: $5$hd376/X/7ZmeGmOC$tVHyhdUIYgEnWK8rVTuALGiEXyJbNgVbjxPX2W0ZKw5
+        state: present
   roles:
     - role: users
     - role: docker
