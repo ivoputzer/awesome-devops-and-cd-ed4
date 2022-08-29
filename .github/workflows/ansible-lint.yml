@@ -6,6 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Lint Ansible Playbook
-        uses: ansible/ansible-lint-action@master
+        uses: ansible-community/ansible-lint-action@main
         with:
-          targets: provision.yml
+          path: provision.yml
