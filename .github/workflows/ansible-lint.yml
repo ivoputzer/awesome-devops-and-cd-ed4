@@ -1,11 +1,9 @@
 name: Ansible Lint
 on: [push, pull_request]
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Lint Ansible Playbook
-        uses: ansible-community/ansible-lint-action@main
-        with:
-          path: provision.yml
+        run: ansible-playbook provision.yml --syntax-check
