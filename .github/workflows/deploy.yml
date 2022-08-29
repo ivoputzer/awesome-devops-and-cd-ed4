@@ -1,0 +1,24 @@
+name: Production Deploy
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ansible playbook syntax check
+        run: ansible-playbook deploy.yml --syntax-check
+  deploy:
+    needs: lint
+    runs-on: ubuntu-latest
+    - uses: actions/checkout@master
+      with:
+        ref: refs/heads/master
+    - name: Docker build
+      run: docker build --tag awesome-devops-and-cd-ed4 .
+    - name: Docker save
+      run: docker save -o ${GITHUB_SHA}.tar awesome-devops-and-cd-ed4
+    - name: Ansible deploy
+      run: ansible-playbook provision.yml --inventory-file env/production --extra-vars="ansible_user=${{ secrets.ansible_user}} ansible_password=${{ secrets.ansible_password}} github_sha=${GITHUB_SHA} github_repository_name=awesome-devops-and-cd-ed4"
+      env:
+        ANSIBLE_HOST_KEY_CHECKING: False
+        ANSIBLE_SSH_COMMON_ARGS: '-o PreferredAuthentications=password'

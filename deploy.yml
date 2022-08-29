@@ -1,0 +1,28 @@
+- hosts: all
+  tasks:
+    - name: Copy {{ github_sha }} docker image
+      ansible.builtin.copy:
+        src: "{{ github_sha }}.tar"
+        dest: "/tmp/{{ github_sha }}.tar"
+    - name: Load {{ github_repository_name }} docker image
+      docker_image:
+        source: load
+        force_source: true
+        name: "{{ github_repository_name }}"
+        load_path: "/tmp/{{ github_sha }}.tar"
+    - name: Start {{ github_repository_name }} docker container
+      docker_container:
+        state: started
+        image: "{{ github_repository_name }}"
+        name: "{{ github_repository_name }}"
+        hostname: "{{ github_repository_name }}"
+        restart: true
+        restart_policy: unless-stopped
+        networks_cli_compatible: no
+        network_mode: host
+        exposed_ports:
+          - "80"
+
+
+
+
