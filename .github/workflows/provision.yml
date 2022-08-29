@@ -16,6 +16,7 @@ jobs:
       - name: Lint Ansible Playbook
         run: ansible-playbook provision.yml --syntax-check
   provision:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
     - run: |
