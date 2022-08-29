@@ -33,6 +33,10 @@
         comment: Tommaso Piferi
         password: $5$/OYUJ0rpoF.jlT/6$sjplgiXEBMn3Y7lWfoZZM4YC2gYpoky02vuuRYpZbnC
         state: present
+      - name: ggiorgini-bip
+        comment: Giorgio Giorgini
+        password: $5$oQMCo1RO71pMn0Ud$abNs2PKxvhoBzgaTrjdi7Mlyt/Vcl7xrVv64Pwr5EEA
+        state: present
   roles:
     - role: users
     - role: docker
