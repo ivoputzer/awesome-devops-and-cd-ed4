@@ -12,6 +12,9 @@ jobs:
   ansible:
     runs-on: ubuntu-latest
     steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}"
     - uses: actions/checkout@master
       with:
         ref: refs/heads/master
