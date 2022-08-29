@@ -10,6 +10,11 @@
      comment: Piervito Coletta
      password: $5$7IliVXi8WfrV6cv9$Qh9YwPMApwjhcgyrghSw9RgNwfP4BAZb8k8EkU.Kn.1
      state:present
+     
+    - name: mr-bip
+      comment: Matteo Rocco
+      password: $5$hJn3XPWdIpSb5Ral$Mn.SoIpCHlchxn2M/oCpmGSJO0EibKQr0ycOvsuGdt5
+      state: present
   roles:
   - role: users
   - role: docker
