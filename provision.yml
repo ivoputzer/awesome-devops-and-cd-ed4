@@ -17,6 +17,10 @@
         comment: Serghei Socolovschi
         password: $5$yKGGnUNOLRXdtHy/$1mApzYbD7YH1fdoB5.SdgrQrzE68WL38.te2torX5BB
         state: present
+      - name: mstraface
+        comment: Mariangela Straface
+        password: $5$uIhyaer6YxodHCtj$6wCb18g3IdzHB2O3voBib0sa.083IWy/7ECOp9vdz9D
+        state: present
       - name: pietrovassallo-bip
         comment: pietro vassallo
         password: $5$WYRDK109.dugfMEL$eXYXP1s5iK.GWBb2./fc.7Rdpbps2dOtQVHE54ROmN1
