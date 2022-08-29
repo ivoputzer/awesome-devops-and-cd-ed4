@@ -1,6 +1,11 @@
-name: Provisioning
+name: Production Provisioning
 on:
   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Ansible Log Level'
+        required: false
+        default: 'warning'
     tags:
       description: manual provisioning
 jobs:
